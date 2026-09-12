@@ -1,0 +1,8 @@
+{
+  "name": "Remix Bot Monitor",
+  "description": "Monitor de infraestructura y gestión de bots en sesiones tmux por SSH",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
