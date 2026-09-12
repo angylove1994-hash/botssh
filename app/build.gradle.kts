@@ -32,7 +32,10 @@ android {
       keyPassword = System.getenv("KEY_PASSWORD")
     }
     create("debugConfig") {
-      storeFile = file("${rootDir}/debug.keystore")
+      // Usa el debug.keystore por defecto de Android en el home del usuario.
+      // Si quieres seguir usando uno propio dentro del repo, cambia esta línea
+      // por: storeFile = file("${rootDir}/debug.keystore")  (y crea ese archivo con keytool)
+      storeFile = file(System.getProperty("user.home") + "/.android/debug.keystore")
       storePassword = "android"
       keyAlias = "androiddebugkey"
       keyPassword = "android"
